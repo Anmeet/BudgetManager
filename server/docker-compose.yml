@@ -1,0 +1,17 @@
+version: '1'
+
+services:
+  express-typescript-budgetmanager:
+    environment:
+      - NODE_ENV=development
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - .:/usr/src/app
+    container_name: express-typescript-budgetmanager
+    expose:
+      - '3000'
+    ports:
+      - '3000:3000'
+    command: npm run dev

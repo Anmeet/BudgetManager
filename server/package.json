@@ -15,11 +15,14 @@
   "license": "ISC",
   "husky": {
     "hooks": {
-      "pre-commit": "yarn lint"
+      "pre-commit": "yarn lint",
+      "pre-push": "yarn test"
     }
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.2",
+    "@types/body-parser": "^1.19.5",
+    "@types/express": "^4.17.21",
     "@types/node": "^20.10.6",
     "@typescript-eslint/eslint-plugin": "^6.17.0",
     "@typescript-eslint/parser": "^6.17.0",
@@ -29,5 +32,9 @@
     "prettier": "^3.1.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2"
   }
 }
