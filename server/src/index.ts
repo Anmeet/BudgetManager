@@ -7,11 +7,27 @@ import { StatusCodes } from 'http-status-codes';
 import RequestValidator from './utils/RequestValidator';
 import { CreateUserRequest } from './requests/CreateUserRequest';
 import ErrorHandler from './utils/ErrorHandler';
+import config from './config/config';
+import helmet from 'helmet';
+import cors from './security/CorsProtection';
+import rateLimiter from './security/RateLimiter';
+import tooBusy from './security/Toobusy';
+import HttpsEnforcer from './security/HttpsEnforcer';
+const xss = require('xss-clean');
+import compression from 'compression';
 
 const app: Application = express();
 
-app.use(bodyParser.json());
+app.use(cors);
+app.use(xss());
+app.use(bodyParser.json({ limit: '50kb' }));
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(helmet());
+app.use(rateLimiter);
+app.use(tooBusy);
+app.use(HttpsEnforcer);
+
+app.use(compression());
 
 app.get(
   '/protected',
@@ -55,11 +71,9 @@ app.use((err: ApiError, req: Request, res: Response, next: NextFunction) => {
   });
 });
 
-const PORT = 3001;
-
 try {
-  app.listen(PORT, (): void => {
-    console.log(`Connected successfully on port ${PORT}`);
+  app.listen(config.PORT, (): void => {
+    console.log(`Connected successfully on port ${config.PORT}`);
   });
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
 } catch (error: any) {
