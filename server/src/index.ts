@@ -15,6 +15,8 @@ import tooBusy from './security/Toobusy';
 import HttpsEnforcer from './security/HttpsEnforcer';
 const xss = require('xss-clean');
 import compression from 'compression';
+const swaggerUi = require('swagger-ui-express');
+import { swaggerDocument } from './../swagger';
 
 const app: Application = express();
 
@@ -56,6 +58,8 @@ app.post('/create-user', RequestValidator.validate(CreateUserRequest), async (re
     message: 'Hello World from post!',
   });
 });
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.use((req: Request, res: Response, next: NextFunction) => next(new NotFoundError(req.path)));
 
