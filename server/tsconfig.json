@@ -2,7 +2,9 @@
   "extends": "@tsconfig/node20/tsconfig.json",
   "compilerOptions": {
     "outDir": "dist",
-    "experimentalDecorators": true
+    "experimentalDecorators": true, 
+    "emitDecoratorMetadata": true,
+    "strictPropertyInitialization": false
   },
   "include": ["src", "./global.d.ts"],
   "exclude": ["node_modules"]

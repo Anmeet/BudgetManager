@@ -1,4 +1,4 @@
-import { getUsers } from './open-api/get-users';
+import { getUsers } from './src/open-api/get-users';
 
 export const swaggerDocument = {
   openapi: '3.0.1',
