@@ -15,7 +15,7 @@ export default class ErrorHandler {
   };
 
   static initializeUnhandledException = () => {
-    process.on('unhandledRejection', (reason: Error, promise: Promise<any>) => {
+    process.on('unhandledRejection', (reason: Error) => {
       console.log(reason.name, reason.message);
       console.log('UNHANDLED REJECTION! 💥 Shutting down...');
       throw reason;

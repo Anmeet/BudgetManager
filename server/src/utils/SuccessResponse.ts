@@ -1,6 +1,6 @@
 export class SuccessResponse<T> {
-  statusCode: number;
   data: T;
+  statusCode: number;
 
   constructor(data: T, statusCode: number) {
     this.statusCode = statusCode;
