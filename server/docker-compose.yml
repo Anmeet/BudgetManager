@@ -2,6 +2,8 @@ version: '1'
 
 services:
   express-typescript-budgetmanager:
+    depends_on:
+      - mongodb-docker
     environment:
       - NODE_ENV=development
     build:
@@ -15,3 +17,37 @@ services:
     ports:
       - '3000:3000'
     command: npm run dev
+    networks:
+      - shared-network
+    restart: on-failure
+
+  mongodb-docker:
+    image: mongodb
+    container_name: mongodb-docker
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=root
+    volumes:
+      - mongodata:/data/db
+    ports:
+      - '27017:27017'
+    networks:
+      - shared-network
+    restart: on-failure
+
+  adminer:
+    image: adminer
+    container_name: adminer-docker
+    depends_on:
+      - mongodb-docker
+    ports:
+      - '8080:8080'
+    networks:
+      - shared-network
+    restart: on-failure
+
+volumes:
+  mongodata:
+
+networks:
+  shared-network:
