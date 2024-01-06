@@ -1,8 +1,8 @@
 import express from 'express';
 import RequestValidator from '../middlewares/RequestValidator';
 import { SignUpRequest } from '../requests/SignUpRequest';
-import AuthController from '../controller/AuthController';
 import { SignInRequest } from '../requests/SignInRequest';
+import AuthController from '../controllers/AuthController';
 
 const router = express.Router();
 
