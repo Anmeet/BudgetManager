@@ -3,8 +3,8 @@ import { IsEmail, IsNotEmpty } from 'class-validator';
 export class SignInRequest {
   @IsNotEmpty()
   @IsEmail()
-  email: string;
+  email!: string;
 
   @IsNotEmpty()
-  password: string;
+  password!: string;
 }
