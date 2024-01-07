@@ -1,13 +1,13 @@
 import { NextFunction, Request, Response } from 'express';
-import { asyncWrapper } from '../utils/asyncWrapper';
-import { SuccessResponse } from '../utils/SuccessResponse';
+import { asyncWrapper } from '@utils/asyncWrapper';
+import { SuccessResponse } from '@utils/util';
 
 export default class AuthController {
   constructor() {}
   static signIn = asyncWrapper(async (req: Request, res: Response, next: NextFunction) => {
     const response = await res.send({
       success: true,
-      message: 'Successfully signed in!',
+      message: 'Successfully signed in!!',
     });
 
     return new SuccessResponse(response, 200);

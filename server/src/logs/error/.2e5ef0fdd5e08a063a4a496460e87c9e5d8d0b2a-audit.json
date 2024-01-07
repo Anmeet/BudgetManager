@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "C:\\Users\\anmee\\Documents\\projects\\BudgetManager\\server\\src\\logs\\error\\.2e5ef0fdd5e08a063a4a496460e87c9e5d8d0b2a-audit.json",
+    "files": [
+        {
+            "date": 1704584426820,
+            "name": "C:\\Users\\anmee\\Documents\\projects\\BudgetManager\\server\\src\\logs\\error\\info-2024-01-07.log",
+            "hash": "89a12539bc3fee771796cbd41cf402a6ce25e8a0caf9f236e8db3fa624bde844"
+        }
+    ],
+    "hashType": "sha256"
+}

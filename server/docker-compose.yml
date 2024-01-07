@@ -1,53 +1,46 @@
-version: '1'
+version: '3.7'
 
 services:
-  express-typescript-budgetmanager:
-    depends_on:
-      - mongodb-docker
-    environment:
-      - NODE_ENV=development
-    build:
-      context: .
-      dockerfile: Dockerfile.dev
+  proxy:
+    image: nginx:alpine
+    container_name: proxy
+    ports:
+      - '80:80'
     volumes:
-      - .:/usr/src/app
-    container_name: express-typescript-budgetmanager
-    expose:
-      - '3000'
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    restart: 'unless-stopped'
+    networks:
+      - backend
+  server:
+    build:
+      context: ./
+      target: development-build-stage
+      dockerfile: Dockerfile
+    container_name: server
     ports:
       - '3000:3000'
-    command: npm run dev
-    networks:
-      - shared-network
-    restart: on-failure
-
-  mongodb-docker:
-    image: mongodb
-    container_name: mongodb-docker
-    environment:
-      - MONGO_INITDB_ROOT_USERNAME=root
-      - MONGO_INITDB_ROOT_PASSWORD=root
     volumes:
-      - mongodata:/data/db
+      - ./:/app
+      - /app/node_modules
+    restart: 'unless-stopped'
+    networks:
+      - backend
+    links:
+      - mongo
+    depends_on:
+      - mongo
+  mongo:
+    image: mvertes/alpine-mongo
+    container_name: mongo
     ports:
       - '27017:27017'
     networks:
-      - shared-network
-    restart: on-failure
-
-  adminer:
-    image: adminer
-    container_name: adminer-docker
-    depends_on:
-      - mongodb-docker
-    ports:
-      - '8080:8080'
-    networks:
-      - shared-network
-    restart: on-failure
-
-volumes:
-  mongodata:
+      - backend
 
 networks:
-  shared-network:
+  backend:
+    driver: bridge
+
+volumes:
+  data:
+    driver: local

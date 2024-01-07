@@ -1,0 +1,44 @@
+2024-01-07 13:15:04 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/AuthController.ts[0m:[93m3[0m:[93m33[0m - [91merror[0m[90m TS2307: [0mCannot find module '@utils/SuccessResponse' or its corresponding type declarations.
+
+[7m3[0m import { SuccessResponse } from '@utils/SuccessResponse';
+[7m [0m [91m                                ~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/AuthController.ts[0m:[93m3[0m:[93m33[0m - [91merror[0m[90m TS2307: [0mCannot find module '@utils/SuccessResponse' or its corresponding type declarations.
+
+[7m3[0m import { SuccessResponse } from '@utils/SuccessResponse';
+[7m [0m [91m                                ~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\anmee\Documents\projects\BudgetManager\server\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\anmee\Documents\projects\BudgetManager\server\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\anmee\Documents\projects\BudgetManager\server\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\anmee\Documents\projects\BudgetManager\server\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\anmee\Documents\projects\BudgetManager\server\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\anmee\Documents\projects\BudgetManager\server\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+2024-01-07 13:15:42 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/utils/asyncWrapper.ts[0m:[93m3[0m:[93m33[0m - [91merror[0m[90m TS2307: [0mCannot find module './SuccessResponse' or its corresponding type declarations.
+
+[7m3[0m import { SuccessResponse } from './SuccessResponse';
+[7m [0m [91m                                ~~~~~~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/utils/asyncWrapper.ts[0m:[93m3[0m:[93m33[0m - [91merror[0m[90m TS2307: [0mCannot find module './SuccessResponse' or its corresponding type declarations.
+
+[7m3[0m import { SuccessResponse } from './SuccessResponse';
+[7m [0m [91m                                ~~~~~~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\anmee\Documents\projects\BudgetManager\server\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\anmee\Documents\projects\BudgetManager\server\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\anmee\Documents\projects\BudgetManager\server\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\anmee\Documents\projects\BudgetManager\server\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\anmee\Documents\projects\BudgetManager\server\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\anmee\Documents\projects\BudgetManager\server\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
