@@ -51,7 +51,7 @@
        "@/*": ["*"],
       "@config/*": ["config/*"],
       "@controllers/*": ["controllers/*"],
-      "@databases": ["databases"],
+      "@databases/*": ["databases/*"],
       "@docs/*": ["docs/*"],
       "@dtos/*": ["dtos/*"],
       "@exceptions/*": ["exceptions/*"],
@@ -84,9 +84,10 @@
 
     /* Advanced Options */
     "skipLibCheck": true,                     /* Skip type checking of declaration files. */
-    "forceConsistentCasingInFileNames": true  /* Disallow inconsistently-cased references to the same file. */
+    "forceConsistentCasingInFileNames": true,  /* Disallow inconsistently-cased references to the same file. */
+     "resolveJsonModule": true
   },
-  "include": ["src"],
+  "include": ["src/**/*", "tests/**/*"],
   "exclude": ["node_modules","src/logs", "src/tests"],
   "files": ["src/types.d.ts"]
 }

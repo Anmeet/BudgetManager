@@ -1,7 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
-import { asyncWrapper } from '../utils/asyncWrapper';
-import { SuccessResponse } from '../utils/SuccessResponse';
-import UserModel from '../models/User.model';
+import { asyncWrapper } from '@utils/asyncWrapper';
+import { SuccessResponse } from '@utils/util';
 
 export default class AuthController {
   constructor() {}

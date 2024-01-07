@@ -1,11 +1,6 @@
 import mongoose from 'mongoose';
-import config from '../config/config';
-
-interface MongoDBConnectionError extends Error {
-  name: string;
-  message: string;
-  stack?: string;
-}
+import config from '@config/config';
+import { MongoDBConnectionError } from '@/interfaces/database.interface';
 
 const connectionString =
   config.NODE_ENV === 'production'

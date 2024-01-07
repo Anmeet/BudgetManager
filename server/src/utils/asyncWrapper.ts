@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Request, Response, NextFunction } from 'express';
-import { SuccessResponse } from './SuccessResponse';
+import { SuccessResponse } from '@utils/util';
 
 type AsyncFunction = (req: Request, res: Response, next: NextFunction) => Promise<any>;
 

@@ -1,13 +1,24 @@
-import express from 'express';
-import RequestValidator from '../middlewares/RequestValidator';
-import { SignUpRequest } from '../requests/SignUpRequest';
-import { SignInRequest } from '../requests/SignInRequest';
-import AuthController from '../controllers/AuthController';
+import { CreateUserDto } from '@/dtos/users.dto';
+import { Router } from 'express';
+import AuthController from '@controllers/AuthController';
+import { SignInRequest } from '@dtos/SignInRequest';
+import RequestValidator from '@middlewares/RequestValidator';
+import { Routes } from '@/interfaces/routes.interface';
 
-const router = express.Router();
+class AuthRoute implements Routes {
+  public path = '/';
+  public router = Router();
+  public authController = new AuthController();
 
-router.post('/signup', RequestValidator.validate(SignUpRequest), AuthController.signUp);
-router.post('/signin', RequestValidator.validate(SignInRequest), AuthController.signIn);
-router.get('/test', AuthController.test);
+  constructor() {
+    this.initializeRoutes();
+  }
 
-export default router;
+  private initializeRoutes() {
+    this.router.post(`${this.path}signup`, RequestValidator.validate(CreateUserDto, 'body'), AuthController.signUp);
+    this.router.post(`${this.path}signin`, RequestValidator.validate(SignInRequest, 'body'), AuthController.signIn);
+    this.router.get(`${this.path}test`, AuthController.test);
+  }
+}
+
+export default AuthRoute;

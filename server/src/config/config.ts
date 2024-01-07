@@ -9,6 +9,8 @@ const config = {
   MONGODB_PASSWORD: process.env.MONGODB_PASSWORD,
   HAS_CREDENTIALS: process.env.HAS_CREDENTIALS === 'true',
   ORIGIN: process.env.ORIGIN || 'http://localhost:3000',
+  LOG_FORMAT: process.env.LOG_FORMAT,
+  LOG_DIR: process.env.LOG_DIR,
 };
 
 export default config;

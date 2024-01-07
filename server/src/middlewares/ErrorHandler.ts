@@ -1,9 +1,9 @@
 import { Request, Response, NextFunction } from 'express';
-import { ApiError } from '../utils/ApiError';
+import { HttpException } from '@/exceptions/HttpException';
 
 export default class ErrorHandler {
   static handleError = () => {
-    return async (err: ApiError, req: Request, res: Response, next: NextFunction) => {
+    return async (err: HttpException, req: Request, res: Response, next: NextFunction) => {
       try {
         const statusCode = err.statusCode || 500;
         res.status(statusCode).send({

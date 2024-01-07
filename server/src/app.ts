@@ -3,7 +3,6 @@ import ErrorHandler from '@middlewares/ErrorHandler';
 import cors from '@security/CorsProtection';
 import rateLimiter from '@security/RateLimiter';
 import tooBusy from '@security/Toobusy';
-import { NotFoundError } from '@utils/ApiError';
 import compression from 'compression';
 import cookieParser from 'cookie-parser';
 import express, { NextFunction, Request, Response } from 'express';
@@ -14,22 +13,24 @@ import 'reflect-metadata';
 import swaggerJSDoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
 import xss from 'xss-clean';
-import { startConnection } from './databases/connectDb';
-import routes from './routes';
+import { startConnection } from '@databases/connectDb';
+import { Logger } from '@utils/logger';
+import { NotFoundError } from '@exceptions/HttpException';
+import { Routes } from '@interfaces/routes.interface';
 
 class App {
   public app: express.Application;
   public env: string;
   public port: string | number;
 
-  constructor() {
+  constructor(routes: Routes[]) {
     this.app = express();
     this.env = process.env.NODE_ENV || 'development';
     this.port = config.PORT;
 
     this.connectToDatabase();
     this.initializeMiddlewares();
-    this.initializeRoutes();
+    this.initializeRoutes(routes);
     this.initializeSwagger();
     this.initializeErrorHandling();
   }
@@ -61,11 +62,14 @@ class App {
     this.app.use(express.urlencoded({ extended: true }));
     this.app.use(cookieParser());
     this.app.use(tooBusy);
+    this.app.use(Logger.getHttpLoggerInstance());
     this.app.use(rateLimiter);
   }
 
-  private initializeRoutes() {
-    this.app.use('/api/v1', routes);
+  private initializeRoutes(routes: Routes[]) {
+    routes.forEach(route => {
+      this.app.use('/', route.router);
+    });
   }
 
   private initializeSwagger() {
