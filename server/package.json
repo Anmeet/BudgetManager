@@ -26,7 +26,7 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "yarn pretty && yarn lint",
+      "pre-commit": "yarn pretty && yarn lint && git add -A .",
       "pre-push": "yarn test",
       "prepare-commit-msg": "exec < /dev/tty && npx cz --hook || true"
     }
@@ -64,7 +64,7 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.2",
     "eslint-plugin-security": "^2.1.0",
-    "husky": "^8.0.3",
+    "husky": "4",
     "jest": "^29.7.0",
     "lint-staged": "^15.2.0",
     "nodemon": "^3.0.2",
