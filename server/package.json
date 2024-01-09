@@ -26,10 +26,13 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "yarn pretty && yarn lint && git add -A .",
+      "pre-commit": "lint-staged",
       "pre-push": "yarn test",
       "prepare-commit-msg": "exec < /dev/tty && npx cz --hook || true"
     }
+  },
+  "lint-staged": {
+    "*": "yarn pretty && yarn lint:fix && git add -A ."
   },
   "config": {
     "commitizen": {
