@@ -1,0 +1,77 @@
+2024-01-09 12:27:14 info: [0mGET /api-docs/ [36m304[0m 9.835 ms - -[0m
+2024-01-09 12:27:15 info: [0mGET /api-docs/swagger-ui.css [36m304[0m 6.329 ms - -[0m
+2024-01-09 12:27:15 info: [0mGET /api-docs/swagger-ui-bundle.js [36m304[0m 5.751 ms - -[0m
+2024-01-09 12:27:15 info: [0mGET /api-docs/swagger-ui-standalone-preset.js [36m304[0m 3.154 ms - -[0m
+2024-01-09 12:27:15 info: [0mGET /api-docs/swagger-ui-init.js [36m304[0m 1.069 ms - -[0m
+2024-01-09 12:27:18 info: [0mGET / [32m200[0m 2.368 ms - 115[0m
+2024-01-09 12:27:19 info: [0mGET /favicon.ico [33m404[0m 14.956 ms - -[0m
+2024-01-09 12:27:37 info: [0mGET /users [32m200[0m 67.454 ms - 50[0m
+2024-01-09 12:31:34 info: [0mPOST /users [33m400[0m 21.246 ms - 581[0m
+2024-01-09 12:31:53 info: [0mPOST /users [33m400[0m 2.488 ms - 581[0m
+2024-01-09 12:32:00 info: [0mPOST /users [33m400[0m 2.024 ms - 581[0m
+2024-01-09 12:32:38 info: [0mPOST /users [33m400[0m 18.938 ms - 581[0m
+2024-01-09 12:32:57 info: [0mPOST /users [33m404[0m 20.772 ms - -[0m
+2024-01-09 12:35:38 info: [0mGET /user [33m404[0m 9.758 ms - -[0m
+2024-01-09 12:35:44 info: [0mGET /users [32m200[0m 25.992 ms - 271[0m
+2024-01-09 12:36:18 info: [0mPOST /users [33m400[0m 9.743 ms - 479[0m
+2024-01-09 12:36:55 info: [0mPOST /users [33m400[0m 2.688 ms - 536[0m
+2024-01-09 12:37:01 info: [0mPOST /users [33m404[0m 3.452 ms - -[0m
+2024-01-09 12:37:20 info: [0mGET /users [32m200[0m 13.287 ms - 485[0m
+2024-01-09 12:37:42 info: [0mPOST /users [33m404[0m 3.601 ms - -[0m
+2024-01-09 12:38:19 info: [0mPOST /users [33m404[0m 2.703 ms - -[0m
+2024-01-09 12:43:15 info: [0mPOST /users [33m404[0m 21.030 ms - -[0m
+2024-01-09 13:00:25 info: [0mPOST /users [32m201[0m 78.913 ms - 257[0m
+2024-01-09 13:03:11 info: [0mPOST /users [33m404[0m 27.949 ms - -[0m
+2024-01-09 13:06:41 info: [0mPOST /users [33m404[0m 3.993 ms - -[0m
+2024-01-09 13:06:53 info: [0mPOST /users [33m404[0m 4.441 ms - -[0m
+2024-01-09 13:16:00 info: [0mPOST /users [33m404[0m 28.011 ms - -[0m
+2024-01-09 13:16:06 info: [0mPOST /users [33m404[0m 6.127 ms - -[0m
+2024-01-09 13:16:12 info: [0mPOST /users [33m404[0m 4.700 ms - -[0m
+2024-01-09 13:17:26 info: [0mPOST /users [33m404[0m 21.108 ms - -[0m
+2024-01-09 13:22:03 info: [0mPOST /users [33m404[0m 58.355 ms - -[0m
+2024-01-09 13:22:09 info: [0mPOST /users [33m404[0m 5.496 ms - -[0m
+2024-01-09 13:25:55 error: [POST] /users >> StatusCode:: 404, Message:: The requested path /users not found!
+2024-01-09 13:25:55 info: [0mPOST /users [33m404[0m 71.817 ms - 65[0m
+2024-01-09 13:26:12 error: [POST] /users >> StatusCode:: 404, Message:: The requested path /users not found!
+2024-01-09 13:26:12 info: [0mPOST /users [33m404[0m 9.773 ms - 65[0m
+2024-01-09 13:26:42 error: [POST] /users >> StatusCode:: 404, Message:: The requested path /users not found!
+2024-01-09 13:26:42 info: [0mPOST /users [33m404[0m 4.352 ms - 65[0m
+2024-01-09 13:29:39 error: [POST] /users >> StatusCode:: 404, Message:: The requested path /users not found!
+2024-01-09 13:29:40 info: [0mPOST /users [33m404[0m 55.884 ms - -[0m
+2024-01-09 13:30:16 info: [0mPOST /users [33m404[0m 47.465 ms - -[0m
+2024-01-09 13:30:26 info: [0mPOST /users [33m404[0m 6.492 ms - -[0m
+2024-01-09 14:50:02 error: [POST] /users >> StatusCode:: 404, Message:: The requested path /users not found!
+2024-01-09 14:50:02 info: [0mPOST /users [33m404[0m 46.964 ms - -[0m
+2024-01-09 14:50:11 error: [POST] /users >> StatusCode:: 404, Message:: The requested path /users not found!
+2024-01-09 14:50:11 info: [0mPOST /users [33m404[0m 3.440 ms - -[0m
+2024-01-09 14:50:18 error: [POST] /users >> StatusCode:: 404, Message:: The requested path /users not found!
+2024-01-09 14:50:18 info: [0mPOST /users [33m404[0m 4.327 ms - -[0m
+2024-01-09 14:53:06 error: [POST] /users >> StatusCode:: 400, Message:: property firstName should not exist, property lastName should not exist, property phoneNumber should not exist
+2024-01-09 14:53:06 info: [0mPOST /users [33m400[0m 46.847 ms - 860[0m
+2024-01-09 14:53:16 error: [POST] /users >> StatusCode:: 400, Message:: property phoneNumber should not exist
+2024-01-09 14:53:16 info: [0mPOST /users [33m400[0m 3.552 ms - 488[0m
+2024-01-09 14:53:22 error: [POST] /users >> StatusCode:: 400, Message:: Expected double-quoted property name in JSON at position 32
+2024-01-09 14:53:23 info: [0mPOST /users [33m400[0m 6.424 ms - -[0m
+2024-01-09 14:53:31 error: [POST] /users >> StatusCode:: 404, Message:: The requested path /users not found!
+2024-01-09 14:53:31 info: [0mPOST /users [33m404[0m 8.895 ms - -[0m
+2024-01-09 14:53:37 error: [POST] /users >> StatusCode:: 404, Message:: The requested path /users not found!
+2024-01-09 14:53:37 info: [0mPOST /users [33m404[0m 3.028 ms - -[0m
+2024-01-09 14:54:53 error: [POST] /users >> StatusCode:: 404, Message:: The requested path /users not found!
+2024-01-09 14:54:53 info: [0mPOST /users [33m404[0m 32.901 ms - -[0m
+2024-01-09 14:55:41 error: [POST] /users >> StatusCode:: 400, Message:: firstName must be shorter than or equal to 20 characters,firstName must be longer than or equal to 3 characters,firstName must be a string, lastName must be shorter than or equal to 20 characters,lastName must be longer than or equal to 3 characters,lastName must be a string, phoneNumber must be a number conforming to the specified constraints
+2024-01-09 14:55:41 info: [0mPOST /users [33m400[0m 33.243 ms - -[0m
+2024-01-09 14:55:56 error: [POST] /users >> StatusCode:: 404, Message:: The requested path /users not found!
+2024-01-09 14:55:56 info: [0mPOST /users [33m404[0m 12.818 ms - -[0m
+2024-01-09 14:56:03 error: [POST] /users >> StatusCode:: 404, Message:: The requested path /users not found!
+2024-01-09 14:56:03 info: [0mPOST /users [33m404[0m 5.216 ms - -[0m
+2024-01-09 15:05:10 error: [POST] /users >> StatusCode:: 400, Message:: User already exists
+2024-01-09 15:05:10 info: [0mPOST /users [33m400[0m 246.899 ms - 452[0m
+2024-01-09 15:05:15 info: [0mPOST /users [32m201[0m 62.496 ms - 258[0m
+2024-01-09 15:11:44 info: [0mPOST /users [32m201[0m 92.678 ms - 260[0m
+2024-01-09 15:11:51 info: [0mGET /users [32m200[0m 43.803 ms - -[0m
+2024-01-09 15:16:05 error: [POST] /users >> StatusCode:: 404, Message:: The requested path /users not found!
+2024-01-09 15:16:05 info: [0mPOST /users [33m404[0m 54.908 ms - -[0m
+2024-01-09 15:16:36 error: [POST] /users >> StatusCode:: 400, Message:: User already exists
+2024-01-09 15:16:36 info: [0mPOST /users [33m400[0m 275.649 ms - 452[0m
+2024-01-09 15:16:41 info: [0mPOST /users [32m201[0m 73.214 ms - 262[0m
+2024-01-09 15:16:45 info: [0mGET /users [32m200[0m 21.959 ms - -[0m

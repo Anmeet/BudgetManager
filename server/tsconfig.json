@@ -35,7 +35,8 @@
       "@routes/*": ["routes/*"],
       "@services/*": ["services/*"],
       "@security/*": ["security/*"],
-      "@utils/*": ["utils/*"]
+      "@utils/*": ["utils/*"],
+      "@types/*": ["types/*"],
     }
   },
   "include": ["src/**/*", "tests/**/*"],

@@ -1,0 +1,47 @@
+2024-01-09 13:25:55 error: [POST] /users >> StatusCode:: 404, Message:: The requested path /users not found!
+2024-01-09 13:26:12 error: [POST] /users >> StatusCode:: 404, Message:: The requested path /users not found!
+2024-01-09 13:26:42 error: [POST] /users >> StatusCode:: 404, Message:: The requested path /users not found!
+2024-01-09 13:29:39 error: [POST] /users >> StatusCode:: 404, Message:: The requested path /users not found!
+2024-01-09 14:50:02 error: [POST] /users >> StatusCode:: 404, Message:: The requested path /users not found!
+2024-01-09 14:50:11 error: [POST] /users >> StatusCode:: 404, Message:: The requested path /users not found!
+2024-01-09 14:50:18 error: [POST] /users >> StatusCode:: 404, Message:: The requested path /users not found!
+2024-01-09 14:53:06 error: [POST] /users >> StatusCode:: 400, Message:: property firstName should not exist, property lastName should not exist, property phoneNumber should not exist
+2024-01-09 14:53:16 error: [POST] /users >> StatusCode:: 400, Message:: property phoneNumber should not exist
+2024-01-09 14:53:22 error: [POST] /users >> StatusCode:: 400, Message:: Expected double-quoted property name in JSON at position 32
+2024-01-09 14:53:31 error: [POST] /users >> StatusCode:: 404, Message:: The requested path /users not found!
+2024-01-09 14:53:37 error: [POST] /users >> StatusCode:: 404, Message:: The requested path /users not found!
+2024-01-09 14:54:53 error: [POST] /users >> StatusCode:: 404, Message:: The requested path /users not found!
+2024-01-09 14:55:41 error: [POST] /users >> StatusCode:: 400, Message:: firstName must be shorter than or equal to 20 characters,firstName must be longer than or equal to 3 characters,firstName must be a string, lastName must be shorter than or equal to 20 characters,lastName must be longer than or equal to 3 characters,lastName must be a string, phoneNumber must be a number conforming to the specified constraints
+2024-01-09 14:55:56 error: [POST] /users >> StatusCode:: 404, Message:: The requested path /users not found!
+2024-01-09 14:56:03 error: [POST] /users >> StatusCode:: 404, Message:: The requested path /users not found!
+2024-01-09 15:04:34 error: uncaughtException: validation_middleware_1.default.validate is not a function
+TypeError: validation_middleware_1.default.validate is not a function
+    at UsersRoute.initializeRoutes (C:\Users\anmee\Documents\projects\BudgetManager\server\src\routes\users.route.ts:17:55)
+    at new UsersRoute (C:\Users\anmee\Documents\projects\BudgetManager\server\src\routes\users.route.ts:13:10)
+    at Object.<anonymous> (C:\Users\anmee\Documents\projects\BudgetManager\server\src\server.ts:10:40)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._compile (C:\Users\anmee\Documents\projects\BudgetManager\server\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\anmee\AppData\Local\Temp\ts-node-dev-hook-922007373901587.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\anmee\AppData\Local\Temp\ts-node-dev-hook-922007373901587.js:114:20)
+    at require.extensions.<computed> (C:\Users\anmee\AppData\Local\Temp\ts-node-dev-hook-922007373901587.js:71:20)
+    at Object.nodeDevHook [as .ts] (C:\Users\anmee\Documents\projects\BudgetManager\server\node_modules\ts-node-dev\lib\hook.js:63:13)
+2024-01-09 15:04:46 error: uncaughtException: ⨯ Unable to compile TypeScript:
+src/middlewares/validation.middleware.ts(53,1): error TS1128: Declaration or statement expected.
+
+Error: ⨯ Unable to compile TypeScript:
+src/middlewares/validation.middleware.ts(53,1): error TS1128: Declaration or statement expected.
+
+    at Object.<anonymous> (C:\Users\anmee\Documents\projects\BudgetManager\server\src\middlewares\validation.middleware.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._compile (C:\Users\anmee\Documents\projects\BudgetManager\server\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\anmee\AppData\Local\Temp\ts-node-dev-hook-922007373901587.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\anmee\AppData\Local\Temp\ts-node-dev-hook-922007373901587.js:114:20)
+    at require.extensions.<computed> (C:\Users\anmee\AppData\Local\Temp\ts-node-dev-hook-922007373901587.js:71:20)
+    at Object.nodeDevHook [as .ts] (C:\Users\anmee\Documents\projects\BudgetManager\server\node_modules\ts-node-dev\lib\hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1023:12)
+2024-01-09 15:05:10 error: [POST] /users >> StatusCode:: 400, Message:: User already exists
+2024-01-09 15:16:05 error: [POST] /users >> StatusCode:: 404, Message:: The requested path /users not found!
+2024-01-09 15:16:36 error: [POST] /users >> StatusCode:: 400, Message:: User already exists
