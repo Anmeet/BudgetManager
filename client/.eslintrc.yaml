@@ -1,21 +1,18 @@
 ---
 
-
 plugins:
   - react
   - '@typescript-eslint'
   - prettier
 root: true
 extends:
-  - react-app
-  - react-app/jest
   - airbnb-typescript
   - plugin:@typescript-eslint/recommended
   - plugin:react/recommended
   - prettier
   - next/core-web-vitals
 parserOptions:
-  project: "./tsconfig.json"
+  project: "./client/tsconfig.json"
 rules:
   prettier/prettier: error
   no-var: 1

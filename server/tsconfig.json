@@ -64,5 +64,4 @@
  "include": ["src/**/*", "tests/**/*"],
   "exclude": ["node_modules", "src/logs","jest.config.js"],
   "files": ["src/types.d.ts"]
-  
 }

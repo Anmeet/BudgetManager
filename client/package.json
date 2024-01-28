@@ -2,7 +2,6 @@
   "name": "budgetmanager",
   "version": "0.1.0",
   "private": true,
-  "type": "commonjs",
   "scripts": {
     "dev": "next dev",
     "commit": "cz",
@@ -27,6 +26,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@typescript-eslint/eslint-plugin": "^6.19.1",
     "commitizen": "^4.3.0",
     "cz-customizable": "^7.0.0",
     "eslint": "^8",
