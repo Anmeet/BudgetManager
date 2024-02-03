@@ -1,5 +1,5 @@
 {
-  "name": "budgetmanager",
+  "name": "server",
   "version": "1.0.0",
   "description": "An application to manager user budget",
   "main": "server.js",
@@ -10,6 +10,7 @@
     "build:swc": "swc src -d dist --source-maps --copy-files",
     "lint": "eslint src/**/*.ts",
     "lint:fix": "npm run lint -- --fix",
+    "lint-staged": "yarn pretty && yarn lint:fix && git add -A .",
     "format": "eslint src/**/*.ts --fix",
     "pretty": "prettier --write \"src/**/*.ts\"",
     "test": "jest --forceExit --detectOpenHandles --coverage --verbose",

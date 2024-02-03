@@ -1,16 +1,18 @@
 {
-  "name": "budgetmanager",
+  "name": "client",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "build": "next build",
     "commit": "cz",
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint -- --fix",
+    "lint-staged": "yarn pretty && yarn lint:fix && git add -A .",
     "format": "eslint src/**/*.ts --fix",
     "pretty": "prettier --write \"src/**/*.ts\"",
-    "test:debug": "jest --inspect-brk test --runInBand --no-cache",
+    "test": "jest --inspect-brk test --runInBand --no-cache",
     "typecheck": "tsc --noEmit",
     "prepare": "husky install"
   },
