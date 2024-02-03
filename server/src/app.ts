@@ -1,5 +1,5 @@
 import config from '@config/config';
-import ErrorHandler from '@middlewares/ErrorHandler';
+import ErrorHandler from '@/middlewares/error.middleware';
 import cors from '@security/CorsProtection';
 import rateLimiter from '@security/RateLimiter';
 import tooBusy from '@security/Toobusy';
@@ -52,6 +52,7 @@ class App {
   }
 
   private initializeMiddlewares() {
+    this.app.use(Logger.getHttpLoggerInstance());
     this.app.use(cors);
     this.app.use(hpp());
     this.app.use(helmet());
@@ -62,7 +63,6 @@ class App {
     this.app.use(express.urlencoded({ extended: true }));
     this.app.use(cookieParser());
     this.app.use(tooBusy);
-    this.app.use(Logger.getHttpLoggerInstance());
     this.app.use(rateLimiter);
   }
 

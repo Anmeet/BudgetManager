@@ -10,6 +10,7 @@ export const asyncWrapper = (handler: AsyncFunction) => {
       const response: SuccessResponse<any> = await handler(req, res, next);
       res.status(response.statusCode).send({
         data: response.data,
+        message: response.data,
       });
     } catch (error) {
       next(error);

@@ -42,3 +42,31 @@ TSError: ⨯ Unable to compile TypeScript:
     at Module.load (node:internal/modules/cjs/loader:1207:32)
     at Function.Module._load (node:internal/modules/cjs/loader:1023:12)
     at Module.require (node:internal/modules/cjs/loader:1235:19)
+2024-01-09 15:04:34 error: uncaughtException: validation_middleware_1.default.validate is not a function
+TypeError: validation_middleware_1.default.validate is not a function
+    at UsersRoute.initializeRoutes (C:\Users\anmee\Documents\projects\BudgetManager\server\src\routes\users.route.ts:17:55)
+    at new UsersRoute (C:\Users\anmee\Documents\projects\BudgetManager\server\src\routes\users.route.ts:13:10)
+    at Object.<anonymous> (C:\Users\anmee\Documents\projects\BudgetManager\server\src\server.ts:10:40)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._compile (C:\Users\anmee\Documents\projects\BudgetManager\server\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\anmee\AppData\Local\Temp\ts-node-dev-hook-922007373901587.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\anmee\AppData\Local\Temp\ts-node-dev-hook-922007373901587.js:114:20)
+    at require.extensions.<computed> (C:\Users\anmee\AppData\Local\Temp\ts-node-dev-hook-922007373901587.js:71:20)
+    at Object.nodeDevHook [as .ts] (C:\Users\anmee\Documents\projects\BudgetManager\server\node_modules\ts-node-dev\lib\hook.js:63:13)
+2024-01-09 15:04:46 error: uncaughtException: ⨯ Unable to compile TypeScript:
+src/middlewares/validation.middleware.ts(53,1): error TS1128: Declaration or statement expected.
+
+Error: ⨯ Unable to compile TypeScript:
+src/middlewares/validation.middleware.ts(53,1): error TS1128: Declaration or statement expected.
+
+    at Object.<anonymous> (C:\Users\anmee\Documents\projects\BudgetManager\server\src\middlewares\validation.middleware.ts:1:7)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._compile (C:\Users\anmee\Documents\projects\BudgetManager\server\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\anmee\AppData\Local\Temp\ts-node-dev-hook-922007373901587.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at require.extensions..jsx.require.extensions..js (C:\Users\anmee\AppData\Local\Temp\ts-node-dev-hook-922007373901587.js:114:20)
+    at require.extensions.<computed> (C:\Users\anmee\AppData\Local\Temp\ts-node-dev-hook-922007373901587.js:71:20)
+    at Object.nodeDevHook [as .ts] (C:\Users\anmee\Documents\projects\BudgetManager\server\node_modules\ts-node-dev\lib\hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1023:12)

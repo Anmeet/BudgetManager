@@ -1,12 +1,13 @@
 import validateEnv from '@utils/validateEnv';
-import ErrorMiddleware from '@middlewares/ErrorHandler';
+import ErrorMiddleware from '@/middlewares/error.middleware';
 import App from './app';
-import AuthRoute from '@routes/AuthRoute';
-import IndexRoute from '@routes/IndexRoute';
+import AuthRoute from '@/routes/auth.route';
+import IndexRoute from '@/routes/index.route';
+import UsersRoute from '@/routes/users.route';
 
 validateEnv();
 
-const app = new App([new AuthRoute(), new IndexRoute()]);
+const app = new App([new IndexRoute(), new UsersRoute(), new AuthRoute()]);
 
 app.listen();
 

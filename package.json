@@ -1,0 +1,29 @@
+{
+  "name": "BudgetManager",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start": "lerna run dev --parallel",
+    "lint": "lerna run lint --parallel",
+    "format": "lerna run format --parallel",
+    "pretty": "lerna run pretty --parallel",
+    "test": "lerna run test --parallel",
+    "build": "lerna run build --parallel",
+    "lint-staged": "lerna run lint-staged --parallel"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^18.6.0",
+    "@commitlint/config-conventional": "^18.6.0",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "4",
+    "lerna": "^8.0.2"
+  }
+}
