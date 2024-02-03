@@ -7,6 +7,9 @@
     "commit": "cz",
     "start": "next start",
     "lint": "next lint",
+    "lint:fix": "next lint -- --fix",
+    "format": "eslint src/**/*.ts --fix",
+    "pretty": "prettier --write \"src/**/*.ts\"",
     "test:debug": "jest --inspect-brk test --runInBand --no-cache",
     "typecheck": "tsc --noEmit",
     "prepare": "husky install"
@@ -57,6 +60,17 @@
     "transform": {
       "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/ts-jest"
     }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn test",
+      "prepare-commit-msg": "exec < /dev/tty && npx cz --hook || true"
+    }
+  },
+  "lint-staged": {
+    "*": "yarn pretty && yarn lint:fix && git add -A ."
   },
   "config": {
     "commitizen": {

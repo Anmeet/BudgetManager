@@ -12,7 +12,7 @@ extends:
   - prettier
   - next/core-web-vitals
 parserOptions:
-  project: "./client/tsconfig.json"
+  project: '../client/tsconfig.json'
 rules:
   prettier/prettier: error
   no-var: 1
