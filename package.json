@@ -13,7 +13,8 @@
     "test": "lerna run test --stream --parallel",
     "build": "lerna run build --parallel",
     "lint-staged": "lerna run lint-staged --parallel",
-    "clean": "rmdir /s /q node_modules && lerna exec -- rmdir /s /q node_modules"
+    "clean:w": "del /q /f yarn.lock && lerna exec -- del /q /f yarn.lock && lerna exec -- rmdir /s /q node_modules",
+    "clean": "rm -rf ./package-lock.json && lerna exec -- rm -rf package-lock.json && lerna exec -- rm -rf node_modules"
   },
   "config": {
     "commitizen": {
