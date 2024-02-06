@@ -5,13 +5,15 @@
     "packages/*"
   ],
   "scripts": {
+    "postinstall": "lerna exec -- yarn install",
     "start": "lerna run dev --parallel",
     "lint": "lerna run lint --parallel",
     "format": "lerna run format --parallel",
     "pretty": "lerna run pretty --parallel",
     "test": "lerna run test --stream --parallel",
     "build": "lerna run build --parallel",
-    "lint-staged": "lerna run lint-staged --parallel"
+    "lint-staged": "lerna run lint-staged --parallel",
+    "clean": "rmdir /s /q node_modules && lerna exec -- rmdir /s /q node_modules"
   },
   "config": {
     "commitizen": {
