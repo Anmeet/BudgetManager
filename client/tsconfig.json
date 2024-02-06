@@ -35,7 +35,9 @@
     ".next/types/**/*.ts",
     "./jest.setup.js",
     "./jest.config.js",
-    "./next.config.mjs"
-  ],
+    "./next.config.mjs",
+    "./jest.environment.js",
+    "./__tests__/__mocks__/msw/server.js",
+     "./__tests__/__mocks__/msw/handlers.js"  ],
   "exclude": ["node_modules"]
 }
